@@ -1,0 +1,22 @@
+Type: MS 
+
+Rank: E 
+
+Stat Limit: 16 
+
+Cost: 0 
+
+HP: 100 
+
+AC: 20 
+
+AG: 10 
+
+EN: 20 
+
+EC: 10 
+
+DM: 8 
+
+Move: 3 
+
