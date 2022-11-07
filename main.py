@@ -708,6 +708,806 @@ def orankSelect(a, b, c):
                 loadoutEText.set(str(os.getLoadout()))
 
                 updateCost()
+    elif osClicked.get() == osOptions[0]:
+        match rank:
+            case "E":
+                os.setCost(0)
+                os.setSMod(1)
+                os.setLMod(1)
+                os.setUMod(2)
+                os.setLoadout(2)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "D":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "C":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "B":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "A":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "S":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+    elif osClicked.get() == osOptions[0]:
+        match rank:
+            case "E":
+                os.setCost(0)
+                os.setSMod(1)
+                os.setLMod(1)
+                os.setUMod(2)
+                os.setLoadout(2)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "D":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "C":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "B":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "A":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "S":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+    elif osClicked.get() == osOptions[0]:
+        match rank:
+            case "E":
+                os.setCost(0)
+                os.setSMod(1)
+                os.setLMod(1)
+                os.setUMod(2)
+                os.setLoadout(2)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "D":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "C":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "B":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "A":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "S":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+    elif osClicked.get() == osOptions[0]:
+        match rank:
+            case "E":
+                os.setCost(0)
+                os.setSMod(1)
+                os.setLMod(1)
+                os.setUMod(2)
+                os.setLoadout(2)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "D":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "C":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "B":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "A":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "S":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+    elif osClicked.get() == osOptions[0]:
+        match rank:
+            case "E":
+                os.setCost(0)
+                os.setSMod(1)
+                os.setLMod(1)
+                os.setUMod(2)
+                os.setLoadout(2)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "D":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "C":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "B":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "A":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "S":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+    elif osClicked.get() == osOptions[0]:
+        match rank:
+            case "E":
+                os.setCost(0)
+                os.setSMod(1)
+                os.setLMod(1)
+                os.setUMod(2)
+                os.setLoadout(2)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "D":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "C":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "B":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "A":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "S":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+    elif osClicked.get() == osOptions[0]:
+        match rank:
+            case "E":
+                os.setCost(0)
+                os.setSMod(1)
+                os.setLMod(1)
+                os.setUMod(2)
+                os.setLoadout(2)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "D":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "C":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "B":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "A":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "S":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+    elif osClicked.get() == osOptions[0]:
+        match rank:
+            case "E":
+                os.setCost(0)
+                os.setSMod(1)
+                os.setLMod(1)
+                os.setUMod(2)
+                os.setLoadout(2)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "D":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "C":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "B":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "A":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "S":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+    elif osClicked.get() == osOptions[0]:
+        match rank:
+            case "E":
+                os.setCost(0)
+                os.setSMod(1)
+                os.setLMod(1)
+                os.setUMod(2)
+                os.setLoadout(2)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "D":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "C":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "B":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "A":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "S":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+    elif osClicked.get() == osOptions[0]:
+        match rank:
+            case "E":
+                os.setCost(0)
+                os.setSMod(1)
+                os.setLMod(1)
+                os.setUMod(2)
+                os.setLoadout(2)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "D":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "C":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "B":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "A":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
+            case "S":
+                os.setCost(0)
+                os.setSMod(2)
+                os.setLMod(2)
+                os.setUMod(4)
+                os.setLoadout(3)
+
+                smEText.set(str(os.getSMod()))
+                lmEText.set(str(os.getLMod()))
+                umEText.set(str(os.getUMod()))
+                loadoutEText.set(str(os.getLoadout()))
+
+                updateCost()
 
 
 root.title("Mobile Suit Gundam Nexus Character Builder")
