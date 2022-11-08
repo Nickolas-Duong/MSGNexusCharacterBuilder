@@ -1,8 +1,9 @@
+#222203817
 import tkinter
-
 import MobileSuit
 import OS
 from tkinter import *
+import math
 from pathlib import Path
 
 root = Tk()
@@ -538,6 +539,7 @@ def rankSelect(a, b, c):
 
                 updateCost()
 
+
 def typeSelect(a, b, c):
     rankLabel = Label(root, text="Rank:")
     rankDrop = OptionMenu(root, rankClicked, *rankOptions, command=lambda x=None: rankSelect)
@@ -561,7 +563,9 @@ def typeSelect(a, b, c):
     loadoutLabel.grid(row=8, column=2)
     loadoutE.grid(row=8, column=3)
     rankSelect(0, 0, 0)
+    #osSelect(0, 0, 0)
     orankSelect(0, 0, 0)
+
     if typeClicked.get() == "None":
         rankDrop.config(state=DISABLED)
         terrainDrop.config(state=DISABLED)
@@ -618,20 +622,20 @@ def terrainSelect(a, b, c):
 
 
 def osSelect(a, b, c):
-    orankLabel = Label(root, text="Rank:")
-    orankDrop = OptionMenu(root, orankClicked, *rankOptions, command=lambda x=None: orankSelect)
     smE.insert(0, str(os.getSMod()))
     lmE.insert(0, str(os.getLMod()))
     umE.insert(0, str(os.getUMod()))
     loadoutE.insert(0, str(os.getLoadout()))
+    orankSelect(0, 0, 0)
 
 
 def orankSelect(a, b, c):
     rank = orankClicked.get()
     if osClicked.get() == osOptions[0]:
+        baseCost = 0
         match rank:
             case "E":
-                os.setCost(0)
+                os.setCost((int(baseCost) * int(rankMult[0])))
                 os.setSMod(1)
                 os.setLMod(1)
                 os.setUMod(2)
@@ -644,7 +648,7 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "D":
-                os.setCost(0)
+                os.setCost((int(baseCost) * int(rankMult[1])))
                 os.setSMod(2)
                 os.setLMod(2)
                 os.setUMod(4)
@@ -657,10 +661,10 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "C":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
+                os.setCost((int(baseCost) * int(rankMult[2])))
+                os.setSMod(4)
+                os.setLMod(4)
+                os.setUMod(6)
                 os.setLoadout(3)
 
                 smEText.set(str(os.getSMod()))
@@ -670,11 +674,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "B":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[3])))
+                os.setSMod(6)
+                os.setLMod(6)
+                os.setUMod(9)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -683,11 +687,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "A":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[4])))
+                os.setSMod(9)
+                os.setLMod(9)
+                os.setUMod(12)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -696,11 +700,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "S":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[5])))
+                os.setSMod(12)
+                os.setLMod(12)
+                os.setUMod(16)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -708,14 +712,15 @@ def orankSelect(a, b, c):
                 loadoutEText.set(str(os.getLoadout()))
 
                 updateCost()
-    elif osClicked.get() == osOptions[0]:
+    elif osClicked.get() == osOptions[1]:
+        baseCost = 15
         match rank:
             case "E":
-                os.setCost(0)
-                os.setSMod(1)
-                os.setLMod(1)
+                os.setCost((int(baseCost) * int(rankMult[0])))
+                os.setSMod(2)
+                os.setLMod(0)
                 os.setUMod(2)
-                os.setLoadout(2)
+                os.setLoadout(3)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -724,11 +729,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "D":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
+                os.setCost((int(baseCost) * int(rankMult[1])))
+                os.setSMod(4)
+                os.setLMod(1)
                 os.setUMod(4)
-                os.setLoadout(3)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -737,11 +742,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "C":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[2])))
+                os.setSMod(6)
+                os.setLMod(3)
+                os.setUMod(6)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -750,11 +755,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "B":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[3])))
+                os.setSMod(9)
+                os.setLMod(5)
+                os.setUMod(9)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -763,11 +768,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "A":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[4])))
+                os.setSMod(13)
+                os.setLMod(7)
+                os.setUMod(13)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -776,11 +781,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "S":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[5])))
+                os.setSMod(18)
+                os.setLMod(10)
+                os.setUMod(17)
+                os.setLoadout(6)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -788,14 +793,15 @@ def orankSelect(a, b, c):
                 loadoutEText.set(str(os.getLoadout()))
 
                 updateCost()
-    elif osClicked.get() == osOptions[0]:
+    elif osClicked.get() == osOptions[2]:
+        baseCost = 15
         match rank:
             case "E":
-                os.setCost(0)
+                os.setCost((int(baseCost) * int(rankMult[0])))
                 os.setSMod(1)
-                os.setLMod(1)
-                os.setUMod(2)
-                os.setLoadout(2)
+                os.setLMod(2)
+                os.setUMod(1)
+                os.setLoadout(3)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -804,11 +810,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "D":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[1])))
+                os.setSMod(3)
+                os.setLMod(3)
+                os.setUMod(3)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -817,11 +823,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "C":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[2])))
+                os.setSMod(5)
+                os.setLMod(5)
+                os.setUMod(6)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -830,11 +836,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "B":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[3])))
+                os.setSMod(7)
+                os.setLMod(8)
+                os.setUMod(9)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -843,11 +849,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "A":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[4])))
+                os.setSMod(10)
+                os.setLMod(11)
+                os.setUMod(13)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -856,11 +862,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "S":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[5])))
+                os.setSMod(13)
+                os.setLMod(15)
+                os.setUMod(17)
+                os.setLoadout(6)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -868,14 +874,15 @@ def orankSelect(a, b, c):
                 loadoutEText.set(str(os.getLoadout()))
 
                 updateCost()
-    elif osClicked.get() == osOptions[0]:
+    elif osClicked.get() == osOptions[3]:
+        baseCost = 15
         match rank:
             case "E":
-                os.setCost(0)
-                os.setSMod(1)
-                os.setLMod(1)
+                os.setCost((int(baseCost) * int(rankMult[0])))
+                os.setSMod(0)
+                os.setLMod(2)
                 os.setUMod(2)
-                os.setLoadout(2)
+                os.setLoadout(3)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -884,11 +891,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "D":
-                os.setCost(0)
+                os.setCost((int(baseCost) * int(rankMult[1])))
                 os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setLMod(4)
+                os.setUMod(3)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -897,11 +904,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "C":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[2])))
+                os.setSMod(4)
+                os.setLMod(7)
+                os.setUMod(5)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -910,11 +917,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "B":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[3])))
+                os.setSMod(6)
+                os.setLMod(11)
+                os.setUMod(7)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -923,11 +930,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "A":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[4])))
+                os.setSMod(8)
+                os.setLMod(15)
+                os.setUMod(11)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -936,11 +943,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "S":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[5])))
+                os.setSMod(10)
+                os.setLMod(20)
+                os.setUMod(15)
+                os.setLoadout(6)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -948,14 +955,15 @@ def orankSelect(a, b, c):
                 loadoutEText.set(str(os.getLoadout()))
 
                 updateCost()
-    elif osClicked.get() == osOptions[0]:
+    elif osClicked.get() == osOptions[4]:
+        baseCost = 20
         match rank:
             case "E":
-                os.setCost(0)
-                os.setSMod(1)
-                os.setLMod(1)
-                os.setUMod(2)
-                os.setLoadout(2)
+                os.setCost((int(baseCost) * int(rankMult[0])))
+                os.setSMod(0)
+                os.setLMod(4)
+                os.setUMod(1)
+                os.setLoadout(3)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -964,11 +972,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "D":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[1])))
+                os.setSMod(1)
+                os.setLMod(7)
+                os.setUMod(2)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -977,11 +985,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "C":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
+                os.setCost((int(baseCost) * int(rankMult[2])))
+                os.setSMod(3)
+                os.setLMod(11)
                 os.setUMod(4)
-                os.setLoadout(3)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -990,11 +998,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "B":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[3])))
+                os.setSMod(5)
+                os.setLMod(15)
+                os.setUMod(6)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1003,11 +1011,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "A":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[4])))
+                os.setSMod(7)
+                os.setLMod(20)
+                os.setUMod(10)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1016,11 +1024,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "S":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[5])))
+                os.setSMod(9)
+                os.setLMod(25)
+                os.setUMod(14)
+                os.setLoadout(6)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1028,14 +1036,15 @@ def orankSelect(a, b, c):
                 loadoutEText.set(str(os.getLoadout()))
 
                 updateCost()
-    elif osClicked.get() == osOptions[0]:
+    elif osClicked.get() == osOptions[5]:
+        baseCost = 30
         match rank:
             case "E":
-                os.setCost(0)
-                os.setSMod(1)
-                os.setLMod(1)
-                os.setUMod(2)
-                os.setLoadout(2)
+                os.setCost((int(0) * int(baseCost) * int(rankMult[0])))
+                os.setSMod(0)
+                os.setLMod(0)
+                os.setUMod(0)
+                os.setLoadout(0)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1044,11 +1053,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "D":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[1])))
+                os.setSMod(3)
+                os.setLMod(3)
+                os.setUMod(5)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1057,11 +1066,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "C":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[2])))
+                os.setSMod(6)
+                os.setLMod(6)
+                os.setUMod(8)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1070,11 +1079,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "B":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[3])))
+                os.setSMod(9)
+                os.setLMod(9)
+                os.setUMod(11)
+                os.setLoadout(6)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1083,11 +1092,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "A":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[4])))
+                os.setSMod(13)
+                os.setLMod(13)
+                os.setUMod(16)
+                os.setLoadout(7)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1096,11 +1105,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "S":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[5])))
+                os.setSMod(17)
+                os.setLMod(17)
+                os.setUMod(21)
+                os.setLoadout(8)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1108,14 +1117,15 @@ def orankSelect(a, b, c):
                 loadoutEText.set(str(os.getLoadout()))
 
                 updateCost()
-    elif osClicked.get() == osOptions[0]:
+    elif osClicked.get() == osOptions[6]:
+        baseCost = 30
         match rank:
             case "E":
-                os.setCost(0)
-                os.setSMod(1)
-                os.setLMod(1)
-                os.setUMod(2)
-                os.setLoadout(2)
+                os.setCost((int(0) * int(baseCost) * int(rankMult[0])))
+                os.setSMod(0)
+                os.setLMod(0)
+                os.setUMod(0)
+                os.setLoadout(0)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1124,11 +1134,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "D":
-                os.setCost(0)
-                os.setSMod(2)
+                os.setCost((int(baseCost) * int(rankMult[1])))
+                os.setSMod(7)
                 os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setUMod(3)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1137,11 +1147,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "C":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[2])))
+                os.setSMod(10)
+                os.setLMod(4)
+                os.setUMod(7)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1150,11 +1160,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "B":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[3])))
+                os.setSMod(14)
+                os.setLMod(6)
+                os.setUMod(10)
+                os.setLoadout(6)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1163,11 +1173,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "A":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[4])))
+                os.setSMod(19)
+                os.setLMod(8)
+                os.setUMod(15)
+                os.setLoadout(7)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1176,11 +1186,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "S":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[5])))
+                os.setSMod(25)
+                os.setLMod(10)
+                os.setUMod(20)
+                os.setLoadout(8)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1188,14 +1198,15 @@ def orankSelect(a, b, c):
                 loadoutEText.set(str(os.getLoadout()))
 
                 updateCost()
-    elif osClicked.get() == osOptions[0]:
+    elif osClicked.get() == osOptions[7]:
+        baseCost = 30
         match rank:
             case "E":
-                os.setCost(0)
-                os.setSMod(1)
-                os.setLMod(1)
-                os.setUMod(2)
-                os.setLoadout(2)
+                os.setCost((int(0) * int(baseCost) * int(rankMult[0])))
+                os.setSMod(0)
+                os.setLMod(0)
+                os.setUMod(0)
+                os.setLoadout(0)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1204,11 +1215,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "D":
-                os.setCost(0)
+                os.setCost((int(baseCost) * int(rankMult[1])))
                 os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setLMod(7)
+                os.setUMod(3)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1217,11 +1228,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "C":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[2])))
+                os.setSMod(4)
+                os.setLMod(10)
+                os.setUMod(7)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1230,11 +1241,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "B":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[3])))
+                os.setSMod(6)
+                os.setLMod(14)
+                os.setUMod(10)
+                os.setLoadout(6)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1243,11 +1254,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "A":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[4])))
+                os.setSMod(8)
+                os.setLMod(19)
+                os.setUMod(15)
+                os.setLoadout(7)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1256,11 +1267,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "S":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[5])))
+                os.setSMod(10)
+                os.setLMod(25)
+                os.setUMod(15)
+                os.setLoadout(8)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1268,14 +1279,15 @@ def orankSelect(a, b, c):
                 loadoutEText.set(str(os.getLoadout()))
 
                 updateCost()
-    elif osClicked.get() == osOptions[0]:
+    elif osClicked.get() == osOptions[8] and typeClicked.get() == "MA" or osClicked.get() == osOptions[8] and typeClicked.get() == "Ship":
+        baseCost = 30
         match rank:
             case "E":
-                os.setCost(0)
-                os.setSMod(1)
-                os.setLMod(1)
+                os.setCost((int(baseCost) * int(rankMult[0])))
+                os.setSMod(0)
+                os.setLMod(4)
                 os.setUMod(2)
-                os.setLoadout(2)
+                os.setLoadout(3)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1284,11 +1296,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "D":
-                os.setCost(0)
+                os.setCost((int(baseCost) * int(rankMult[1])))
                 os.setSMod(2)
-                os.setLMod(2)
+                os.setLMod(7)
                 os.setUMod(4)
-                os.setLoadout(3)
+                os.setLoadout(4)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1297,11 +1309,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "C":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[2])))
+                os.setSMod(4)
+                os.setLMod(12)
+                os.setUMod(7)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1310,11 +1322,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "B":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[3])))
+                os.setSMod(6)
+                os.setLMod(17)
+                os.setUMod(10)
+                os.setLoadout(6)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1323,11 +1335,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "A":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[4])))
+                os.setSMod(8)
+                os.setLMod(22)
+                os.setUMod(16)
+                os.setLoadout(7)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1336,11 +1348,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "S":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[5])))
+                os.setSMod(10)
+                os.setLMod(28)
+                os.setUMod(22)
+                os.setLoadout(8)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1348,14 +1360,16 @@ def orankSelect(a, b, c):
                 loadoutEText.set(str(os.getLoadout()))
 
                 updateCost()
-    elif osClicked.get() == osOptions[0]:
+    elif osClicked.get() == osOptions[9] and typeClicked.get() == "Ship":
+        baseCost = 0
+        modifier = 40
         match rank:
             case "E":
-                os.setCost(0)
-                os.setSMod(1)
-                os.setLMod(1)
-                os.setUMod(2)
-                os.setLoadout(2)
+                os.setCost((int(0) * int(baseCost) * int(rankMult[0])))
+                os.setSMod(0)
+                os.setLMod(0)
+                os.setUMod(0)
+                os.setLoadout(0)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1364,11 +1378,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "D":
-                os.setCost(0)
+                os.setCost((int(baseCost) * int(rankMult[1]))-int(modifier))
                 os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setLMod(8)
+                os.setUMod(6)
+                os.setLoadout(5)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1377,11 +1391,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "C":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[2]))-int(modifier))
+                os.setSMod(4)
+                os.setLMod(12)
+                os.setUMod(10)
+                os.setLoadout(6)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1390,11 +1404,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "B":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[3]))-int(modifier))
+                os.setSMod(6)
+                os.setLMod(16)
+                os.setUMod(14)
+                os.setLoadout(7)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1403,11 +1417,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "A":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[4]))-int(modifier))
+                os.setSMod(9)
+                os.setLMod(21)
+                os.setUMod(19)
+                os.setLoadout(8)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1416,11 +1430,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "S":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * int(rankMult[5]))-int(modifier))
+                os.setSMod(12)
+                os.setLMod(26)
+                os.setUMod(24)
+                os.setLoadout(9)
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1428,15 +1442,15 @@ def orankSelect(a, b, c):
                 loadoutEText.set(str(os.getLoadout()))
 
                 updateCost()
-    elif osClicked.get() == osOptions[0]:
+    elif osClicked.get() == osOptions[10]:
+        baseCost = 5
         match rank:
             case "E":
-                os.setCost(0)
-                os.setSMod(1)
-                os.setLMod(1)
+                os.setSMod(2)
+                os.setLMod(2)
                 os.setUMod(2)
-                os.setLoadout(2)
-
+                os.setCost((int(baseCost) * (int(os.getLMod()) + int(os.getSMod()) + int(os.getUMod()))))
+                os.setLoadout(int(2) + math.floor(int(os.getCost())/30))
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
                 umEText.set(str(os.getUMod()))
@@ -1444,11 +1458,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "D":
-                os.setCost(0)
                 os.setSMod(2)
                 os.setLMod(2)
                 os.setUMod(4)
-                os.setLoadout(3)
+                os.setCost((int(baseCost) * (int(os.getLMod()) + int(os.getSMod()) + int(os.getUMod()))))
+                os.setLoadout(int(2) + math.floor(int(os.getCost())/30))
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1457,11 +1471,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "C":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setSMod(4)
+                os.setLMod(4)
+                os.setUMod(6)
+                os.setCost((int(baseCost) * (int(os.getLMod()) + int(os.getSMod()) + int(os.getUMod()))))
+                os.setLoadout(int(2) + math.floor(int(os.getCost())/30))
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1470,11 +1484,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "B":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setSMod(6)
+                os.setLMod(6)
+                os.setUMod(9)
+                os.setCost((int(baseCost) * (int(os.getLMod()) + int(os.getSMod()) + int(os.getUMod()))))
+                os.setLoadout(int(2) + math.floor(int(os.getCost())/30))
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1483,11 +1497,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "A":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setSMod(9)
+                os.setLMod(9)
+                os.setUMod(12)
+                os.setCost((int(baseCost) * (int(os.getLMod()) + int(os.getSMod()) + int(os.getUMod()))))
+                os.setLoadout(int(2) + math.floor(int(os.getCost())/30))
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1496,11 +1510,11 @@ def orankSelect(a, b, c):
 
                 updateCost()
             case "S":
-                os.setCost(0)
-                os.setSMod(2)
-                os.setLMod(2)
-                os.setUMod(4)
-                os.setLoadout(3)
+                os.setSMod(12)
+                os.setLMod(12)
+                os.setUMod(16)
+                os.setCost((int(baseCost) * (int(os.getLMod()) + int(os.getSMod()) + int(os.getUMod()))))
+                os.setLoadout(int(2) + math.floor(int(os.getCost())/30))
 
                 smEText.set(str(os.getSMod()))
                 lmEText.set(str(os.getLMod()))
@@ -1508,6 +1522,20 @@ def orankSelect(a, b, c):
                 loadoutEText.set(str(os.getLoadout()))
 
                 updateCost()
+    else:
+        os.setSMod(0)
+        os.setLMod(0)
+        os.setUMod(0)
+        os.setCost(int(0))
+        os.setLoadout(int(0))
+
+        smEText.set(str(os.getSMod()))
+        lmEText.set(str(os.getLMod()))
+        umEText.set(str(os.getUMod()))
+        loadoutEText.set(str(os.getLoadout()))
+
+        updateCost()
+
 
 
 root.title("Mobile Suit Gundam Nexus Character Builder")
@@ -1530,6 +1558,14 @@ costLabel = Label(root, textvariable=costText)
 
 costLabel.grid(row=0, column=2)
 
+rankMult = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+]
 typeOptions = [
     "None",
     "MS",
@@ -1604,7 +1640,7 @@ osClicked.set(osOptions[0])
 osClicked.trace('w', osSelect)
 
 orankClicked = StringVar()
-orankClicked.set(rankOptions[0])
+orankClicked.set(orankOptions[0])
 orankClicked.trace('w', orankSelect)
 
 osLabel = Label(root, text="OS:")
