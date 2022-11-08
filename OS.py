@@ -1,5 +1,5 @@
 class OS:
-    def __init__(self, name="", cost=0, rank=None, sMod=None, lMod=None, uMod=None, loadout=None):
+    def __init__(self, name="", cost=0, rank=None, sMod=0, lMod=0, uMod=0, loadout=0):
         self.name = name
         self.cost = cost
         self.sMod = sMod
