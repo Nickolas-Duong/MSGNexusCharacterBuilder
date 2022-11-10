@@ -1,15 +1,59 @@
-
 import tkinter
 import MobileSuit
 import OS
+import Mod
 from tkinter import *
 from tkinter import messagebox
 import math
+from tkinter import ttk
 from pathlib import Path
+import textwrap
 
 root = Tk()
 mech = MobileSuit.MobileSuit()
 os = OS.OS()
+mods = None
+
+mModList = []
+modSelect = []
+
+
+def wrap(string, length=120):
+    return '\n'.join(textwrap.wrap(string, length))
+
+
+with open('Modifications.txt', 'r+', encoding='utf-8') as t:
+    count = 0
+    itemCount = 0
+    for line in t.readlines():
+        if count == 0:
+            mModList.append(Mod.Mod())
+            mModList[itemCount].setName(line.replace('\n', ''))
+            count = count + 1
+        elif count == 1:
+            mModList[itemCount].setCost(line.replace('\n', ''))
+            count = count + 1
+        elif count == 2:
+            mModList[itemCount].setDescription(line.replace('\n', ''))
+            count = count + 1
+        elif count == 3:
+            mModList[itemCount].setLevel(line.replace('\n', ''))
+            count = count + 1
+        elif count == 4:
+            mModList[itemCount].setSM(line.replace('\n', ''))
+            count = count + 1
+        elif count == 5:
+            mModList[itemCount].setLM(line.replace('\n', ''))
+            count = count + 1
+        elif count == 6:
+            mModList[itemCount].setUM(line.replace('\n', ''))
+            count = count + 1
+        else:
+            mModList[itemCount].setEffect(line.replace('\n', ''))
+            count = 0
+            itemCount = itemCount + 1
+t.close()
+
 
 def rankSelect(a, b, c):
     rank = rankClicked.get()
@@ -317,7 +361,7 @@ def rankSelect(a, b, c):
                 mech.setEN(160)
                 mech.setEC(17)
                 mech.setDM(18)
-                mech.setSize("7"+u"\u00B1"+"1")
+                mech.setSize("7" + u"\u00B1" + "1")
                 mech.setCarry(0)
                 mech.setSP(0)
 
@@ -346,7 +390,7 @@ def rankSelect(a, b, c):
                 mech.setEN(320)
                 mech.setEC(16)
                 mech.setDM(21)
-                mech.setSize("13"+u"\u00B1"+"2")
+                mech.setSize("13" + u"\u00B1" + "2")
                 mech.setCarry(0)
                 mech.setSP(0)
 
@@ -405,7 +449,7 @@ def rankSelect(a, b, c):
                 mech.setEN(100)
                 mech.setEC(9)
                 mech.setDM(13)
-                mech.setSize("6"+u"\u00B1"+"1")
+                mech.setSize("6" + u"\u00B1" + "1")
                 mech.setCarry(6)
                 mech.setSP(15)
 
@@ -434,7 +478,7 @@ def rankSelect(a, b, c):
                 mech.setEN(180)
                 mech.setEC(10)
                 mech.setDM(16)
-                mech.setSize("9"+u"\u00B1"+"1")
+                mech.setSize("9" + u"\u00B1" + "1")
                 mech.setCarry(9)
                 mech.setSP(30)
 
@@ -463,7 +507,7 @@ def rankSelect(a, b, c):
                 mech.setEN(260)
                 mech.setEC(11)
                 mech.setDM(19)
-                mech.setSize("13"+u"\u00B1"+"2")
+                mech.setSize("13" + u"\u00B1" + "2")
                 mech.setCarry(13)
                 mech.setSP(45)
 
@@ -492,7 +536,7 @@ def rankSelect(a, b, c):
                 mech.setEN(340)
                 mech.setEC(12)
                 mech.setDM(22)
-                mech.setSize("18"+u"\u00B1"+"2")
+                mech.setSize("18" + u"\u00B1" + "2")
                 mech.setCarry(18)
                 mech.setSP(60)
 
@@ -543,13 +587,16 @@ def rankSelect(a, b, c):
 
 def typeSelect(a, b, c):
     rankSelect(0, 0, 0)
-    #osSelect(0, 0, 0)
     orankSelect(0, 0, 0)
 
     if typeClicked.get() == "None":
         rankDrop.config(state=DISABLED)
         terrainDrop.config(state=DISABLED)
         slotUpdate.config(state=DISABLED)
+        modButton.config(state=DISABLED)
+        osDrop.config(state=DISABLED)
+        rankDrop2.config(state=DISABLED)
+
         mech.setCost(0)
         mech.setLimit(None)
         mech.setHP(None)
@@ -582,7 +629,7 @@ def typeSelect(a, b, c):
         osDrop.config(state=NORMAL)
         rankDrop2.config(state=NORMAL)
         terrainDrop.config(state=NORMAL)
-
+        modButton.config(state=NORMAL)
         rankSelect(0, 0, 0)
         orankSelect(0, 0, 0)
 
@@ -601,6 +648,7 @@ def checkTerrain():
     for i, v in enumerate(mech.getTerrain()):
         if v == "+":
             return True
+
 
 def terrainSelect(a, b, c):
     mech.setTerrain(str(terrainClicked.get()))
@@ -936,7 +984,8 @@ def orankSelect(a, b, c):
                 os.setLMod(25)
                 os.setUMod(15)
                 os.setLoadout(8)
-    elif osClicked.get() == osOptions[8] and typeClicked.get() == "MA" or osClicked.get() == osOptions[8] and typeClicked.get() == "Ship":
+    elif osClicked.get() == osOptions[8] and typeClicked.get() == "MA" or osClicked.get() == osOptions[
+        8] and typeClicked.get() == "Ship":
         baseCost = 30
         match rank:
             case "E":
@@ -986,31 +1035,31 @@ def orankSelect(a, b, c):
                 os.setUMod(0)
                 os.setLoadout(0)
             case "D":
-                os.setCost((int(baseCost) * int(rankMult[1]))-int(modifier))
+                os.setCost((int(baseCost) * int(rankMult[1])) - int(modifier))
                 os.setSMod(2)
                 os.setLMod(8)
                 os.setUMod(6)
                 os.setLoadout(5)
             case "C":
-                os.setCost((int(baseCost) * int(rankMult[2]))-int(modifier))
+                os.setCost((int(baseCost) * int(rankMult[2])) - int(modifier))
                 os.setSMod(4)
                 os.setLMod(12)
                 os.setUMod(10)
                 os.setLoadout(6)
             case "B":
-                os.setCost((int(baseCost) * int(rankMult[3]))-int(modifier))
+                os.setCost((int(baseCost) * int(rankMult[3])) - int(modifier))
                 os.setSMod(6)
                 os.setLMod(16)
                 os.setUMod(14)
                 os.setLoadout(7)
             case "A":
-                os.setCost((int(baseCost) * int(rankMult[4]))-int(modifier))
+                os.setCost((int(baseCost) * int(rankMult[4])) - int(modifier))
                 os.setSMod(9)
                 os.setLMod(21)
                 os.setUMod(19)
                 os.setLoadout(8)
             case "S":
-                os.setCost((int(baseCost) * int(rankMult[5]))-int(modifier))
+                os.setCost((int(baseCost) * int(rankMult[5])) - int(modifier))
                 os.setSMod(12)
                 os.setLMod(26)
                 os.setUMod(24)
@@ -1029,7 +1078,7 @@ def orankSelect(a, b, c):
                 os.setLMod(0)
                 os.setUMod(0)
                 os.setCost((int(baseCost) * int(maxOptions[1])))
-                os.setLoadout(int(2) + math.floor(int(os.getCost())/30))
+                os.setLoadout(int(2) + math.floor(int(os.getCost()) / 30))
                 maxText.set("Max Slots: " + str(maxOptions[1]))
             case "D":
                 maxVar.set(maxOptions[2])
@@ -1037,7 +1086,7 @@ def orankSelect(a, b, c):
                 os.setLMod(0)
                 os.setUMod(0)
                 os.setCost((int(baseCost) * int(maxOptions[2])))
-                os.setLoadout(int(2) + math.floor(int(os.getCost())/30))
+                os.setLoadout(int(2) + math.floor(int(os.getCost()) / 30))
                 maxText.set("Max Slots: " + str(maxOptions[2]))
             case "C":
                 maxVar.set(maxOptions[3])
@@ -1045,7 +1094,7 @@ def orankSelect(a, b, c):
                 os.setLMod(0)
                 os.setUMod(0)
                 os.setCost((int(baseCost) * int(maxOptions[3])))
-                os.setLoadout(int(2) + math.floor(int(os.getCost())/30))
+                os.setLoadout(int(2) + math.floor(int(os.getCost()) / 30))
                 maxText.set("Max Slots: " + str(maxOptions[3]))
             case "B":
                 maxVar.set(maxOptions[4])
@@ -1053,7 +1102,7 @@ def orankSelect(a, b, c):
                 os.setLMod(0)
                 os.setUMod(0)
                 os.setCost((int(baseCost) * int(maxOptions[4])))
-                os.setLoadout(int(2) + math.floor(int(os.getCost())/30))
+                os.setLoadout(int(2) + math.floor(int(os.getCost()) / 30))
                 maxText.set("Max Slots: " + str(maxOptions[4]))
             case "A":
                 maxVar.set(maxOptions[5])
@@ -1061,7 +1110,7 @@ def orankSelect(a, b, c):
                 os.setLMod(0)
                 os.setUMod(0)
                 os.setCost((int(baseCost) * int(maxOptions[5])))
-                os.setLoadout(int(2) + math.floor(int(os.getCost())/30))
+                os.setLoadout(int(2) + math.floor(int(os.getCost()) / 30))
                 maxText.set("Max Slots: " + str(maxOptions[5]))
             case "S":
                 maxVar.set(maxOptions[6])
@@ -1069,7 +1118,7 @@ def orankSelect(a, b, c):
                 os.setLMod(0)
                 os.setUMod(0)
                 os.setCost((int(baseCost) * int(maxOptions[6])))
-                os.setLoadout(int(2) + math.floor(int(os.getCost())/30))
+                os.setLoadout(int(2) + math.floor(int(os.getCost()) / 30))
                 maxText.set("Max Slots: " + str(maxOptions[6]))
     else:
         os.setSMod(0)
@@ -1088,9 +1137,10 @@ def orankSelect(a, b, c):
 
     updateCost()
 
+
 def updateSlots(sm, lm, um):
-    if (int(sm)+int(lm)+int(um)) != int(maxVar.get()):
-        if (int(sm)+int(lm)+int(um)) < int(maxVar.get()):
+    if (int(sm) + int(lm) + int(um)) != int(maxVar.get()):
+        if (int(sm) + int(lm) + int(um)) < int(maxVar.get()):
             messagebox.showerror("Invalid slot allocation", "Not enough slots allocated", parent=root)
         else:
             messagebox.showerror("Invalid slot allocation", "Too many slots allocated", parent=root)
@@ -1100,15 +1150,161 @@ def updateSlots(sm, lm, um):
         os.setLMod(lm)
         os.setUMod(um)
 
+
+def openMods():
+    modButton.config(state=DISABLED)
+    rankDrop.config(state=DISABLED)
+    terrainDrop.config(state=DISABLED)
+    slotUpdate.config(state=DISABLED)
+    smE.config(state=DISABLED)
+    lmE.config(state=DISABLED)
+    umE.config(state=DISABLED)
+    typeDrop.config(state=DISABLED)
+    osDrop.config(state=DISABLED)
+    nameE.config(state=DISABLED)
+    global modSelect
+    global mods
+    mods = Toplevel(root)
+
+    excludeList = []
+
+    if len(modSelect) > 0:
+        for mm in range(0, len(mModList)):
+            count2 = 0
+            for m in range(0, len(modSelect)):
+                if modSelect[m].getName() == mModList[mm].getName() and str(modSelect[m].getLevel()) != mModList[mm].getLevel():
+                        if count2 >= 1:
+                            tempMod = Mod.Mod()
+                            tempMod.setName(modSelect[m].getName())
+                            tempMod.setLevel(0)
+                            excludeList.append(tempMod)
+                            print(tempMod.getName() + " " + str(tempMod.getLevel()))
+                elif modSelect[m].getName() == mModList[mm].getName() and str(modSelect[m].getLevel()) == mModList[mm].getLevel():
+                    count2 = count2 + 1
+                    tempMod = Mod.Mod()
+                    tempMod.setName(mModList[mm].getName())
+                    tempMod.setLevel(mModList[mm].getLevel())
+                    excludeList.append(tempMod)
+                    print(tempMod.getName() + " " + str(tempMod.getLevel()))
+
+    mods.title("Modifications")
+    w = 1650
+    h = 650
+    sw = root.winfo_screenwidth()
+    sh = root.winfo_screenheight()
+
+    x = (sw / 2) - (w / 2)
+    y = (sh / 2) - (h / 2)
+
+    mods.geometry('%dx%d+%d+%d' % (w, h, x, y))
+
+    columns = ("Name", "Cost", "Description", "Level", "ShortMod", "LongMod", "UtilityMod", "Effect")
+    modTree = ttk.Treeview(mods, columns=columns, show="headings", selectmode="extended", height=5)
+    modTree.heading("Name", text="Name", anchor=tkinter.CENTER)
+    modTree.heading("Cost", text="Cost", anchor=tkinter.CENTER)
+    modTree.heading("Description", text="Description", anchor=tkinter.CENTER)
+    modTree.heading("Level", text="Level", anchor=tkinter.CENTER)
+    modTree.heading("ShortMod", text="Short Mod", anchor=tkinter.CENTER)
+    modTree.heading("LongMod", text="Long Mod", anchor=tkinter.CENTER)
+    modTree.heading("UtilityMod", text="Utility Mod", anchor=tkinter.CENTER)
+    modTree.heading("Effect", text="Effect", anchor=tkinter.CENTER)
+    s = ttk.Style()
+    s.configure('Treeview', rowheight=100)
+
+    for mod in mModList:
+        count3 = 0
+        for e in excludeList:
+            if e.getName() == mod.getName() and e.getLevel() == mod.getLevel():
+                count3 = count3 + 1
+                continue
+            elif e.getName() == mod.getName() and e.getLevel() == 0:
+                count3 = count3 + 1
+                continue
+        if count3 == 0:
+            modTree.insert("", tkinter.END, values=(
+            mod.getName(), mod.getCost(), wrap(str(mod.getDescription())), mod.getLevel(), mod.getSM(), mod.getLM(),
+            mod.getUM(), mod.getEffect()))
+
+    modTree.pack(side="left", fill="both")
+
+    modTree.column("Name", minwidth=250, width=250, stretch=False)
+    modTree.column("Cost", minwidth=50, width=50, stretch=False)
+    modTree.column("Description", minwidth=750, width=750, stretch=False)
+    modTree.column("Level", minwidth=75, width=75, stretch=False)
+    modTree.column("ShortMod", minwidth=75, width=75, stretch=False)
+    modTree.column("LongMod", minwidth=75, width=75, stretch=False)
+    modTree.column("UtilityMod", minwidth=75, width=75, stretch=False)
+    modTree.column("Effect", minwidth=150, width=150, stretch=False)
+
+    scrollbar = ttk.Scrollbar(mods, orient=tkinter.VERTICAL, command=modTree.yview)
+    modTree.configure(yscrollcommand=scrollbar.set)
+    scrollbar.pack(side="right", fill="y", expand=False)
+
+    def handle_click(event):
+        if modTree.identify_region(event.x, event.y) == "separator":
+            return "break"
+
+    def addModEvent(event):
+        global modSelect
+        item = Mod.Mod()
+        for selected_item in modTree.selection():
+            item.setName(modTree.item(selected_item)['values'][0])
+            item.setCost(modTree.item(selected_item)['values'][1])
+            item.setDescription(str(modTree.item(selected_item)['values'][2]))
+            item.setLevel(modTree.item(selected_item)['values'][3])
+            item.setSM(modTree.item(selected_item)['values'][4])
+            item.setLM(modTree.item(selected_item)['values'][5])
+            item.setUM(modTree.item(selected_item)['values'][6])
+            item.setEffect(modTree.item(selected_item)['values'][7])
+            addMod(item)
+        closeMod()
+
+    modTree.bind('<Double-1>', addModEvent)
+    modTree.bind('<Button-1>', handle_click)
+
+    mods.protocol("WM_DELETE_WINDOW", closeMod)
+
+
+def addMod(item):
+    modSelect.append(item)
+
+
+def closeMod():
+    if typeClicked.get() != "None":
+        modButton.config(state=NORMAL)
+        rankDrop.config(state=NORMAL)
+        terrainDrop.config(state=NORMAL)
+        typeDrop.config(state=NORMAL)
+        osDrop.config(state=NORMAL)
+        nameE.config(state=NORMAL)
+    else:
+        rankDrop.config(state=DISABLED)
+        terrainDrop.config(state=DISABLED)
+        slotUpdate.config(state=DISABLED)
+        modButton.config(state=DISABLED)
+        typeDrop.config(state=NORMAL)
+        osDrop.config(state=DISABLED)
+        nameE.config(state=NORMAL)
+
+    if osClicked.get() == osOptions[10]:
+        slotUpdate.config(state=NORMAL)
+        smE.config(state=NORMAL)
+        lmE.config(state=NORMAL)
+        umE.config(state=NORMAL)
+
+    global mods
+    mods.destroy()
+
+
 root.title("Mobile Suit Gundam Nexus Character Builder")
 
-w = 800
+w = 850
 h = 400
 sw = root.winfo_screenwidth()
 sh = root.winfo_screenheight()
 
-x = (sw/2) - (w/2)
-y = (sh/2) - (h/2)
+x = (sw / 2) - (w / 2)
+y = (sh / 2) - (h / 2)
 
 root.geometry('%dx%d+%d+%d' % (w, h, x, y))
 
@@ -1340,11 +1536,14 @@ maxVar = StringVar()
 maxVar.set(maxOptions[0])
 
 maxText = StringVar()
-maxText.set("Max Slots: " + str(int(os.getSMod())+int(os.getLMod())+int(os.getUMod())))
+maxText.set("Max Slots: " + str(int(os.getSMod()) + int(os.getLMod()) + int(os.getUMod())))
 
 maxLabel = Label(root, textvariable=maxText)
 maxLabel.grid(row=9, column=2)
-slotUpdate = Button(text="Update Slots", command=lambda x=int(smE.get()), y=int(lmE.get()), z=int(umE.get()): updateSlots(smE.get(), lmE.get(), umE.get()),
+slotUpdate = Button(text="Update Slots",
+                    command=lambda x=int(smE.get()), y=int(lmE.get()), z=int(umE.get()): updateSlots(smE.get(),
+                                                                                                     lmE.get(),
+                                                                                                     umE.get()),
                     state=DISABLED)
 slotUpdate.grid(row=9, column=3)
 
@@ -1371,5 +1570,9 @@ umLabel.grid(row=7, column=2)
 umE.grid(row=7, column=3)
 loadoutLabel.grid(row=8, column=2)
 loadoutE.grid(row=8, column=3)
+
+modButton = Button(root, text="Add New Modification", command=openMods)
+modButton.config(state=DISABLED)
+modButton.grid(row=9, column=0)
 
 root.mainloop()

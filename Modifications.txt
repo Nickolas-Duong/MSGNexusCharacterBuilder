@@ -1,0 +1,1299 @@
+Neuro-Link System
+30
+Gain 1 additional TN when you gain TN, except at start of your turn and only once per round. Also increase your next attack
+1
+1
+1
+2
++1
+Neuro-Link System
+60
+Gain 1 additional TN when you gain TN, except at start of your turn and only once per round. Also increase your next attack
+2
+2
+2
+3
++3
+Neuro-Link System
+90
+Gain 1 additional TN when you gain TN, except at start of your turn and only once per round. Also increase your next attack
+3
+3
+3
+4
++5
+Melee Movement Correction
+20
+Your melee weapon will be adjusted for an easier time to hit your target.
+1
+2
+0
+0
+1
+Melee Movement Correction
+40
+Your melee weapon will be adjusted for an easier time to hit your target.
+2
+4
+0
+0
+2
+Melee Movement Correction
+60
+Your melee weapon will be adjusted for an easier time to hit your target.
+3
+6
+0
+1
+3
+Melee Movement Correction
+80
+Your melee weapon will be adjusted for an easier time to hit your target.
+4
+8
+1
+2
+4
+Melee Output Adjustment
+25
+Increase your melee weapon damage modifier output.
+1
+1
+0
+0
+1
+Melee Output Adjustment
+50
+Increase your melee weapon damage modifier output.
+2
+3
+0
+0
+2
+Melee Output Adjustment
+75
+Increase your melee weapon damage modifier output.
+3
+5
+0
+1
+3
+Melee Output Adjustment
+100
+Increase your melee weapon damage modifier output.
+4
+7
+1
+2
+4
+Fire Range Correction
+30
+Increase your ranged weapon’s maximum range by a small amount.
+1
+0
+2
+1
+1
+Fire Range Correction
+60
+Increase your ranged weapon’s maximum range by a small amount.
+2
+1
+3
+2
+2
+Range Aim Correction
+20
+Your ranged weapon will be adjusted for an easier time to target your shot.
+1
+0
+2
+0
+1
+Range Aim Correction
+40
+Your ranged weapon will be adjusted for an easier time to target your shot.
+2
+0
+4
+0
+2
+Range Aim Correction
+60
+Your ranged weapon will be adjusted for an easier time to target your shot.
+3
+0
+6
+1
+3
+Range Aim Correction
+80
+Your ranged weapon will be adjusted for an easier time to target your shot.
+4
+1
+8
+2
+4
+Ranged Output Adjustment
+25
+Increase your ranged weapon damage modifier output.
+1
+0
+1
+0
+1
+Ranged Output Adjustment
+50
+Increase your ranged weapon damage modifier output.
+2
+0
+3
+0
+2
+Ranged Output Adjustment
+75
+Increase your ranged weapon damage modifier output.
+3
+0
+5
+1
+3
+Ranged Output Adjustment
+100
+Increase your ranged weapon damage modifier output.
+4
+1
+7
+2
+4
+Reinforced Joints
+15
+Your unit will have increased agility
+1
+0
+0
+1
+5
+Reinforced Joints
+30
+Your unit will have increased agility
+2
+1
+0
+1
+10
+Reinforced Joints
+45
+Your unit will have increased agility
+3
+1
+1
+1
+15
+New Frame Structure
+25
+Increase your MS/MA frame HP
+1
+0
+0
+1
+100
+New Frame Structure
+50
+Increase your MS/MA frame HP
+2
+0
+1
+1
+200
+New Frame Structure
+75
+Increase your MS/MA frame HP
+3
+1
+1
+2
+350
+New Frame Structure
+100
+Increase your MS/MA frame HP
+4
+1
+2
+2
+450
+New Frame Structure
+125
+Increase your MS/MA frame HP
+5
+2
+2
+3
+600
+Evasive Maneuver Support
+40
+Increase your unit’s EC.
+1
+1
+1
+2
+1
+Evasive Maneuver Support
+80
+Increase your unit’s EC.
+2
+2
+1
+3
+2
+Evasive Maneuver Support
+120
+Increase your unit’s EC.
+3
+2
+2
+4
+3
+Evasive Maneuver Support
+160
+Increase your unit’s EC.
+4
+3
+2
+5
+4
+Evasive Maneuver Support
+200
+Increase your unit’s EC.
+5
+3
+3
+6
+5
+Atmospheric Entry Armor
+30
+Your unit is designed to resist high heat for re-entry. It also increase all AC against explosives and normal beam weapons
+1
+1
+1
+2
+40
+Advanced Armor Model
+35
+Increase your unit frame AC.
+1
+1
+1
+1
+40
+Advanced Armor Model
+70
+Increase your unit frame AC.
+2
+2
+1
+2
+80
+Advanced Armor Model
+105
+Increase your unit frame AC.
+3
+2
+2
+3
+120
+Advanced Armor Model
+140
+Increase your unit frame AC.
+4
+3
+2
+4
+160
+Advanced Armor Model
+175
+Increase your unit frame AC.
+5
+3
+3
+5
+200
+Physical Damage Protection
+30
+Increase all AC when you are hit and negate "ignore AC" by physical weapon.
+1
+0
+0
+2
++75
+Physical Damage Protection
+60
+Increase all AC when you are hit and negate "ignore AC" by physical weapon.
+2
+1
+1
+3
++150
+Physical Damage Protection
+90
+Increase all AC when you are hit and negate "ignore AC" by physical weapon.
+3
+2
+2
+4
++225
+Beam Damage Protection
+30
+Increase all AC when you are hit and negate "ignore AC" by a beam weapon.
+1
+0
+0
+2
++75
+Beam Damage Protection
+60
+Increase all AC when you are hit and negate "ignore AC" by a beam weapon.
+2
+1
+1
+3
++150
+Beam Damage Protection
+90
+Increase all AC when you are hit and negate "ignore AC" by a beam weapon.
+3
+2
+2
+4
++225
+Frame Capacity Adjustment
+30
+Optimizes spacing to increase max loadout. This modification can only be used once
+1
+1
+1
+0
+1
+Frame Capacity Adjustment
+60
+Optimizes spacing to increase max loadout. This modification can only be used once
+2
+2
+2
+0
+2
+Frame Capacity Adjustment
+90
+Optimizes spacing to increase max loadout. This modification can only be used once
+3
+3
+3
+1
+3
+Advanced Frame Shifting
+30
+Some parts of the armor or shield can now be shifted to cover the damage portion, increasing overall Shield or Armor’s AC
+1
+1
+1
+2
+50
+Advanced Frame Shifting
+60
+Some parts of the armor or shield can now be shifted to cover the damage portion, increasing overall Shield or Armor’s AC
+2
+2
+2
+3
+100
+Advanced Frame Shifting
+90
+Some parts of the armor or shield can now be shifted to cover the damage portion, increasing overall Shield or Armor’s AC
+3
+3
+3
+4
+150
+High Sensitivity Sensors
+20
+Your sensors are reinforced to deal with stealth units and searches. Your sensor level must be equal to or better than the stealth unit to find them.
+1
+0
+0
+2
+6
+High Sensitivity Sensors
+40
+Your sensors are reinforced to deal with stealth units and searches. Your sensor level must be equal to or better than the stealth unit to find them.
+2
+0
+1
+3
+6
+High Sensitivity Sensors
+60
+Your sensors are reinforced to deal with stealth units and searches. Your sensor level must be equal to or better than the stealth unit to find them.
+3
+1
+1
+4
+6
+Stealth
+30
+The unit gains the ability to disappear. It will require an enemy to be within a certain range to detect you. Gain +5 to EC and attack while in stealth. Stealth resumes when no enemy is within detection range and has not taken damage. If your unit frame has taken damage, you lose stealth and you cannot enter stealth until end of your next turn. You also lose stealth if you use Action to double your movement or use the Charge Passive Action until your next turn. You will keep your bonus until the end of the turn if the enemy detects you on your turn or you make an attack.
+1
+1
+1
+2
+5
+Stealth
+60
+The unit gains the ability to disappear. It will require an enemy to be within a certain range to detect you. Gain +5 to EC and attack while in stealth. Stealth resumes when no enemy is within detection range and has not taken damage. If your unit frame has taken damage, you lose stealth and you cannot enter stealth until end of your next turn. You also lose stealth if you use Action to double your movement or use the Charge Passive Action until your next turn. You will keep your bonus until the end of the turn if the enemy detects you on your turn or you make an attack.
+2
+2
+2
+3
+3
+Stealth
+90
+The unit gains the ability to disappear. It will require an enemy to be within a certain range to detect you. Gain +5 to EC and attack while in stealth. Stealth resumes when no enemy is within detection range and has not taken damage. If your unit frame has taken damage, you lose stealth and you cannot enter stealth until end of your next turn. You also lose stealth if you use Action to double your movement or use the Charge Passive Action until your next turn. You will keep your bonus until the end of the turn if the enemy detects you on your turn or you make an attack.
+3
+3
+3
+4
+1
+Weapon Limiter Control
+50
+Your unit can overwrite the output of a weapon. Increase hit die size by 1 but with weapon risks blowing up
+1
+2
+2
+1
+50%
+Weapon Limiter Control
+100
+Your unit can overwrite the output of a weapon. Increase hit die size by 1 but with weapon risks blowing up
+2
+3
+3
+2
+25%
+Weapon Limiter Control
+150
+Your unit can overwrite the output of a weapon. Increase hit die size by 1 but with weapon risks blowing up
+3
+4
+4
+3
+0%
+Additional Ammunition Storage
+30
+Increase all normal and limited weapon’s ammunition cartridge count. Use passive action to reload.
+1
+0
+1
+0
+1
+Additional Ammunition Storage
+60
+Increase all normal and limited weapon’s ammunition cartridge count. Use passive action to reload.
+2
+0
+2
+1
+2
+Additional Ammunition Storage
+90
+Increase all normal and limited weapon’s ammunition cartridge count. Use passive action to reload.
+3
+1
+3
+2
+3
+Large Energy Reserve
+25
+Increase your maximum EN
+1
+0
+0
+1
+15
+Large Energy Reserve
+50
+Increase your maximum EN
+2
+1
+1
+1
+35
+Large Energy Reserve
+75
+Increase your maximum EN
+3
+1
+2
+2
+60
+Large Energy Reserve
+100
+Increase your maximum EN
+4
+2
+2
+3
++90
+Auto Repair System
+40
+Recover your unit frame’s HP at the start of every turn. Can only pick up once
+1
+1
+1
+2
++50
+Auto Repair System
+80
+Recover your unit frame’s HP at the start of every turn. Can only pick up once
+2
+2
+2
+3
++100
+Auto Repair System
+120
+Recover your unit frame’s HP at the start of every turn. Can only pick up once
+3
+3
+3
+4
++150
+Auto Repair System
+160
+Recover your unit frame’s HP at the start of every turn. Can only pick up once
+4
+4
+4
+5
++200
+Advanced Energy Circuits
+25
+This reduces the energy use from non-special loadout, minimum cost 1
+1
+1
+1
+0
+2
+Advanced Energy Circuits
+50
+This reduces the energy use from non-special loadout, minimum cost 1
+2
+2
+1
+1
+-4
+Advanced Energy Circuits
+75
+This reduces the energy use from non-special loadout, minimum cost 1
+3
+2
+2
+2
+-6
+Advanced Energy Circuits
+100
+This reduces the energy use from non-special loadout, minimum cost 1
+4
+3
+2
+3
+-8
+Advanced Energy Circuits
+125
+This reduces the energy use from non-special loadout, minimum cost 1
+5
+3
+3
+4
+-10
+Energy Generator
+50
+Recover a small amount of EN every turn.
+1
+1
+1
+2
++15
+Energy Generator
+100
+Recover a small amount of EN every turn.
+2
+2
+2
+3
++30
+Energy Generator
+150
+Recover a small amount of EN every turn.
+3
+3
+3
+5
++50
+Melee Weapon Energy Capsule
+30
+Choose 2 normal melee weapon that uses energy and gain a cartridge with limited number of uses that is energy free.
+1
+1
+0
+0
++2
+Melee Weapon Energy Capsule
+60
+Choose 2 normal melee weapon that uses energy and gain a cartridge with limited number of uses that is energy free.
+2
+2
+0
+0
++4
+Melee Weapon Energy Capsule
+90
+Choose 2 normal melee weapon that uses energy and gain a cartridge with limited number of uses that is energy free.
+3
+2
+0
+1
++6
+Melee Weapon Energy Capsule
+120
+Choose 2 normal melee weapon that uses energy and gain a cartridge with limited number of uses that is energy free.
+4
+3
+1
+1
++8
+Melee Weapon Energy Capsule
+150
+Choose 2 normal melee weapon that uses energy and gain a cartridge with limited number of uses that is energy free.
+5
+3
+1
+2
++10
+Ranged Weapon Energy Capsule
+30
+Choose 2 normal range weapon that uses energy to gain a cartridge with limited number of uses that is energy free.
+1
+0
+1
+0
++2
+Ranged Weapon Energy Capsule
+60
+Choose 2 normal range weapon that uses energy to gain a cartridge with limited number of uses that is energy free.
+2
+0
+2
+0
++4
+Ranged Weapon Energy Capsule
+90
+Choose 2 normal range weapon that uses energy to gain a cartridge with limited number of uses that is energy free.
+3
+0
+2
+1
++6
+Ranged Weapon Energy Capsule
+120
+Choose 2 normal range weapon that uses energy to gain a cartridge with limited number of uses that is energy free.
+4
+1
+3
+1
++8
+Ranged Weapon Energy Capsule
+150
+Choose 2 normal range weapon that uses energy to gain a cartridge with limited number of uses that is energy free.
+5
+1
+3
+2
++10
+Layered Beam Weapon Output
+50
+Beam weapon can now penetrate water space beyond 1 elevation or 2 unit space
+1
+1
+2
+1
++1/+3
+Layered Beam Weapon Output
+100
+Beam weapon can now penetrate water space beyond 1 elevation or 2 unit space
+2
+1
+3
+3
++2/+6
+Energy Transfusion
+30
+Your unit is capable of quickly charging another nearby unit with an action. MS has a range of 1, MA has 2, and Ship has 3.
+1
+0
+0
+2
++25
+Energy Transfusion
+60
+Your unit is capable of quickly charging another nearby unit with an action. MS has a range of 1, MA has 2, and Ship has 3.
+2
+0
+1
+3
++50
+Energy Transfusion
+90
+Your unit is capable of quickly charging another nearby unit with an action. MS has a range of 1, MA has 2, and Ship has 3.
+3
+1
+1
+4
++75
+Advanced Armament Control System
+50
+Allow the unit to use higher rank armament
+1
+2
+2
+1
++1
+Advanced Armament Control System
+150
+Allow the unit to use higher rank armament
+2
+5
+5
+4
++2
+Stacked Firing System
+40
+While out of combat, you can set how many normal weapon’s ammo or capsule will be used at once and each additional increase number of hit die by 2. The weapon can only use that many capsule when set.
+1
+1
+2
+2
+2
+Stacked Firing System
+80
+While out of combat, you can set how many normal weapon’s ammo or capsule will be used at once and each additional increase number of hit die by 2. The weapon can only use that many capsule when set.
+2
+1
+3
+3
+3
+Stacked Firing System
+120
+While out of combat, you can set how many normal weapon’s ammo or capsule will be used at once and each additional increase number of hit die by 2. The weapon can only use that many capsule when set.
+3
+2
+3
+4
+4
+Dual Control System
+50
+The unit to gain one additional action. You can only attack, operating an object, or docking a ship. On attacks, it has a penalty to final damage value
+1
+2
+2
+3
+-50%
+Dual Control System
+100
+The unit to gain one additional action. You can only attack, operating an object, or docking a ship. On attacks, it has a penalty to final damage value
+2
+3
+3
+4
+-25%
+Dual Control System
+150
+The unit to gain one additional action. You can only attack, operating an object, or docking a ship. On attacks, it has a penalty to final damage value
+3
+4
+4
+5
+-
+Mirage System
+40
+Making an illusion or an after image, gain bonus EC against every enemy’s first turn attack(s) that targeted you
+1
+2
+2
+2
++3
+Mirage System
+80
+Making an illusion or an after image, gain bonus EC against every enemy’s first turn attack(s) that targeted you
+2
+3
+2
+3
++4
+Mirage System
+120
+Making an illusion or an after image, gain bonus EC against every enemy’s first turn attack(s) that targeted you
+3
+3
+3
+4
++5
+Unique Frame System
+50
+Once per turn, you can gain a bonus to EC or attack without any action, passive action, or reaction until end of your next turn
+1
+2
+2
+1
++2
+Unique Frame System
+100
+Once per turn, you can gain a bonus to EC or attack without any action, passive action, or reaction until end of your next turn
+2
+3
+3
+3
++3
+Unique Frame System
+150
+Once per turn, you can gain a bonus to EC or attack without any action, passive action, or reaction until end of your next turn
+3
+4
+4
+5
++4
+Stabilizer
+40
+If the unit only moves half or less of normal movement, it gaining extra bonus to weapon attack. You can only have 1 stabilizer modification.
+1
+1
+1
+0
++2
+Stabilizer
+80
+If the unit only moves half or less of normal movement, it gaining extra bonus to weapon attack. You can only have 1 stabilizer modification.
+2
+2
+2
+2
++4
+Stabilizer
+120
+If the unit only moves half or less of normal movement, it gaining extra bonus to weapon attack. You can only have 1 stabilizer modification.
+3
+3
+3
+4
++6
+Additional Thruster
+40
+Adding more thruster to the unit to increase its movement.
+1
+2
+0
+1
+1
+Additional Thruster
+80
+Adding more thruster to the unit to increase its movement.
+2
+3
+1
+2
+2
+Additional Thruster
+120
+Adding more thruster to the unit to increase its movement.
+3
+4
+2
+3
+3
+Limiter Overdrive
+30
+The unit is equip with a system that can either push the unit performance above normal or help improve the pilot’s ability. When activated, it improves pilot’s Range, Melee, and Reaction by 5. This bonus can let your pilot exceed the max stat normally allowed. However, a low level Limiter Overdrive hurts the pilot upon use and at the start of their turn. Damage can be reduced by pilot’s AC.
+1
+2
+2
+2
+50
+Limiter Overdrive
+60
+The unit is equip with a system that can either push the unit performance above normal or help improve the pilot’s ability. When activated, it improves pilot’s Range, Melee, and Reaction by 5. This bonus can let your pilot exceed the max stat normally allowed. However, a low level Limiter Overdrive hurts the pilot upon use and at the start of their turn. Damage can be reduced by pilot’s AC.
+2
+3
+2
+3
+35
+Limiter Overdrive
+90
+The unit is equip with a system that can either push the unit performance above normal or help improve the pilot’s ability. When activated, it improves pilot’s Range, Melee, and Reaction by 5. This bonus can let your pilot exceed the max stat normally allowed. However, a low level Limiter Overdrive hurts the pilot upon use and at the start of their turn. Damage can be reduced by pilot’s AC.
+3
+3
+3
+4
+20
+Limiter Overdrive
+120
+The unit is equip with a system that can either push the unit performance above normal or help improve the pilot’s ability. When activated, it improves pilot’s Range, Melee, and Reaction by 5. This bonus can let your pilot exceed the max stat normally allowed. However, a low level Limiter Overdrive hurts the pilot upon use and at the start of their turn. Damage can be reduced by pilot’s AC.
+4
+4
+4
+5
+5
+Transformable
+30
+The unit can transform into Cruise or Siege form with an action or passive action. Cruise increases EC and Movement while Siege increases Attack and DM. When it transform, terrain type may change. An MS transformed will be MA and vise versa.
+1
+1
+1
+2
++1
+Transformable
+60
+The unit can transform into Cruise or Siege form with an action or passive action. Cruise increases EC and Movement while Siege increases Attack and DM. When it transform, terrain type may change. An MS transformed will be MA and vise versa.
+2
+2
+2
+3
++2
+Transformable
+90
+The unit can transform into Cruise or Siege form with an action or passive action. Cruise increases EC and Movement while Siege increases Attack and DM. When it transform, terrain type may change. An MS transformed will be MA and vise versa.
+3
+3
+3
+4
++3
+Modular Framework
+30
+Your unit is a modular build and is possible to be assembled from multiple pieces. When at a base, docking a ship, or using Armory Package System, you can recover HP and Energy instead of a loadout
+1
+1
+1
+2
++20%
+Modular Framework
+60
+Your unit is a modular build and is possible to be assembled from multiple pieces. When at a base, docking a ship, or using Armory Package System, you can recover HP and Energy instead of a loadout
+2
+2
+2
+3
++35%
+Armory Package System
+30
+Your unit has a system that allows you to change equipment in mid-battle, without returning to base or ship. You can build a package based on the level, but can only contain non-limited weapon and armors. You must use your action to use the system
+1
+1
+1
+2
+1
+Armory Package System
+60
+Your unit has a system that allows you to change equipment in mid-battle, without returning to base or ship. You can build a package based on the level, but can only contain non-limited weapon and armors. You must use your action to use the system
+2
+2
+2
+3
+2
+Armory Package System
+90
+Your unit has a system that allows you to change equipment in mid-battle, without returning to base or ship. You can build a package based on the level, but can only contain non-limited weapon and armors. You must use your action to use the system
+3
+3
+3
+4
+3
+Self-Destruct System
+25
+The unit can self-destruct to avoid anything to be taken. When it explodes, it deals a number of d8 equal to unit DM and times it by the DM to all units within range of 1.
+1
+1
+1
+1
+100
+Co-Pilot System
+30
+The unit can be controlled with more than 1 pilot. The co-pilot(s) can apply a number of total abilities to the main pilot, highest level only. Each level also allows 1 extra pilot.
+1
+1
+1
+2
+2
+Co-Pilot System
+60
+The unit can be controlled with more than 1 pilot. The co-pilot(s) can apply a number of total abilities to the main pilot, highest level only. Each level also allows 1 extra pilot.
+2
+2
+2
+3
+4
+Co-Pilot System
+90
+The unit can be controlled with more than 1 pilot. The co-pilot(s) can apply a number of total abilities to the main pilot, highest level only. Each level also allows 1 extra pilot.
+3
+3
+3
+4
+6
+Linked Weapon System
+50
+Your unit can handle a duplicate of a regular range or melee weapon at the same time. When attacking, make one attack but damage is increased before any reduction. If the weapon uses ammunition, it also uses duplicate weapon’s ammunition. If it uses energy, a duplicate weapon uses 50% EN
+1
+1
+1
+2
+25%
+Linked Weapon System
+100
+Your unit can handle a duplicate of a regular range or melee weapon at the same time. When attacking, make one attack but damage is increased before any reduction. If the weapon uses ammunition, it also uses duplicate weapon’s ammunition. If it uses energy, a duplicate weapon uses 50% EN
+2
+3
+3
+3
+50%
+Anti-Beam Charge
+20
+Fires a missile within range of 5 with coverage of 2 unit range. Reduce beam projectile DM for each space touched. It lasts 3 turns and can be picked up to 5 times. Requires an action to use.
+1
+0
+1
+0
+2
+Improved Hanger
+50
+Ship can now retrieve a unit within range of 1 with a passive action. All units in hanger receive a bonus to HP and EN recovery
+1
+1
+1
+2
++20%
+Improved Hanger
+100
+Ship can now retrieve a unit within range of 1 with a passive action. All units in hanger receive a bonus to HP and EN recovery
+2
+2
+2
+4
++40%
+Automatic Anti-Air Firing System
+40
+The unit will attack missile that fired or unit entered machinegun type weapon range. Choose a machinegun-type weapon and make an attack. Missile EC is the attacker's attack. If it hits, the projectile is destroyed
+1
+0
+1
+2
++3
+Automatic Anti-Air Firing System
+80
+The unit will attack missile that fired or unit entered machinegun type weapon range. Choose a machinegun-type weapon and make an attack. Missile EC is the attacker's attack. If it hits, the projectile is destroyed
+2
+0
+2
+3
++5
+Large Frame Expansion
+80
+Pushing the limit of the original unit frame for more survivability and other benefits. Unit size increases by 1 per 100 HP gained. You can only use this modification once.
+1
+1
+1
+2
+HP+200, EN+25
+Large Frame Expansion
+160
+Pushing the limit of the original unit frame for more survivability and other benefits. Unit size increases by 1 per 100 HP gained. You can only use this modification once.
+2
+2
+2
+4
+HP+400, EN+50
+Large Frame Expansion
+240
+Pushing the limit of the original unit frame for more survivability and other benefits. Unit size increases by 1 per 100 HP gained. You can only use this modification once.
+3
+3
+3
+6
+HP+800, EN+100
+Large Frame Expansion
+320
+Pushing the limit of the original unit frame for more survivability and other benefits. Unit size increases by 1 per 100 HP gained. You can only use this modification once.
+4
+4
+4
+8
+HP+1600, EN+200
+Advanced Catapult
+40
+If the launching unit is smaller than this unit, the movement it is is doubled instead of +3. The Catapult drive system can also be reversed, increasing the movement of the unit with the advanced catapult by 1.
+1
+1
+2
+2
+1
+Analyzer
+40
+Ship can target a unit within range 8. With an action, you analyze a target. On your next turn, you and friendly units gain bonus to attack and EC against analyzed target until end of battle.
+1
+1
+1
+3
++2
+Analyzer
+80
+Ship can target a unit within range 8. With an action, you analyze a target. On your next turn, you and friendly units gain bonus to attack and EC against analyzed target until end of battle.
+2
+2
+2
+4
++3
+Analyzer
+120
+Ship can target a unit within range 8. With an action, you analyze a target. On your next turn, you and friendly units gain bonus to attack and EC against analyzed target until end of battle.
+3
+3
+3
+5
++4
+Advanced AI Support
+100
+Any “System” type modification or loadout that require action can be used with Passive Action. Passive Action will not require anything, but only 1 at a time
+1
+1
+1
+3
+-
+Critical Damage Control
+30
+When sustaining an attack that has half or more of the hit die at maximum or the attack triggers direct hit, you gain bonus AC and direct hit damage can be reduced
+1
+1
+1
+1
+50
+Critical Damage Control
+60
+When sustaining an attack that has half or more of the hit die at maximum or the attack triggers direct hit, you gain bonus AC and direct hit damage can be reduced
+2
+2
+2
+2
+100
+Critical Damage Control
+90
+When sustaining an attack that has half or more of the hit die at maximum or the attack triggers direct hit, you gain bonus AC and direct hit damage can be reduced
+3
+3
+3
+3
+150
+Critical Damage Control
+120
+When sustaining an attack that has half or more of the hit die at maximum or the attack triggers direct hit, you gain bonus AC and direct hit damage can be reduced
+4
+4
+4
+4
+200
+Critical Damage Control
+150
+When sustaining an attack that has half or more of the hit die at maximum or the attack triggers direct hit, you gain bonus AC and direct hit damage can be reduced
+5
+5
+5
+5
+250
+Weapon Database & Analyzer
+30
+Your unit is capable of using passive action to analyze a number of loadout, frame armor class, or energy equal to this level times 2. You will know all of the targeted information. You will also increase your minimum DM per rank and additional 25 AC per rank against target analyzed weapon. You can only pick up this modification once.
+1
+0
+0
+1
+1
+Weapon Database & Analyzer
+60
+Your unit is capable of using passive action to analyze a number of loadout, frame armor class, or energy equal to this level times 2. You will know all of the targeted information. You will also increase your minimum DM per rank and additional 25 AC per rank against target analyzed weapon. You can only pick up this modification once.
+2
+1
+0
+1
+2
+Weapon Database & Analyzer
+90
+Your unit is capable of using passive action to analyze a number of loadout, frame armor class, or energy equal to this level times 2. You will know all of the targeted information. You will also increase your minimum DM per rank and additional 25 AC per rank against target analyzed weapon. You can only pick up this modification once.
+3
+1
+1
+1
+3
+Weapon Database & Analyzer
+120
+Your unit is capable of using passive action to analyze a number of loadout, frame armor class, or energy equal to this level times 2. You will know all of the targeted information. You will also increase your minimum DM per rank and additional 25 AC per rank against target analyzed weapon. You can only pick up this modification once.
+4
+1
+1
+2
+4
+Weapon Database & Analyzer
+150
+Your unit is capable of using passive action to analyze a number of loadout, frame armor class, or energy equal to this level times 2. You will know all of the targeted information. You will also increase your minimum DM per rank and additional 25 AC per rank against target analyzed weapon. You can only pick up this modification once.
+5
+2
+1
+2
+5
+Terrain Adapt
+25
+Your unit has gained or improve the ability on Ground, Flight, Water, or Space. You may pick this up multiple times. If terrain is already ◯, it becomes ◎ when lv1 is taken
+1
+0
+0
+1
+Terrain becomes ◯
+Terrain Adapt
+50
+Your unit has gained or improve the ability on Ground, Flight, Water, or Space. You may pick this up multiple times. If terrain is already ◯, it becomes ◎ when lv1 is taken
+2
+1
+1
+1
+Terrain becomes ◎
+Payload Handler
+30
+The unit is designed to be capable of having another unit to be on top of it. For a unit larger than 1x1, it must not exceed half of the size of the unit with Payload Handler. You can pick this multiple times, but it cannot exceed your unit’s surface area.
+1
+0
+1
+2
+1
+Payload Handler
+60
+The unit is designed to be capable of having another unit to be on top of it. For a unit larger than 1x1, it must not exceed half of the size of the unit with Payload Handler. You can pick this multiple times, but it cannot exceed your unit’s surface area.
+2
+1
+2
+4
+4
+Payload Handler
+90
+The unit is designed to be capable of having another unit to be on top of it. For a unit larger than 1x1, it must not exceed half of the size of the unit with Payload Handler. You can pick this multiple times, but it cannot exceed your unit’s surface area.
+3
+2
+3
+6
+9
+System Modification Converter
+20
+You can convert 1 unused modification slot into another type of slot. You can only do this three times.
